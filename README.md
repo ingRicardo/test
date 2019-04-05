@@ -6,3 +6,4 @@ It's build using the MVC model and includes languages like
 -HTML5 Bootstrap CSS
 -JQuery JS 
  
+ 
