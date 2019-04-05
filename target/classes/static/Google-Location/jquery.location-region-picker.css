@@ -1,0 +1,16 @@
+
+
+.location-region-picker-wrapper {
+
+}
+
+input.location-region-picker {
+	font-size: 1.5rem;
+	padding: 5px;
+}
+
+#map {
+	margin: 20px auto;
+	width: 100%;
+	height: 500px;
+}

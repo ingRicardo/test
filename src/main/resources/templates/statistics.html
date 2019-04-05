@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href= "/bootstrap-4.1.3/bootstrap-4.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container" >
+
+	<div class="row" >
+		<div class="col-md-2" >
+		</div>
+	<div class="col-md-8" >
+	
+			<div class="jumbotron"  style="margin-bottom: 5px;  padding-bottom: 50px;">
+				<h1>Statistics of diabetes!</h1>
+			</div>
+	<div class="row">
+		<div class="col-md-3" >
+			<h4>Women :</h4>
+		</div>
+	<div class="col-md-3" >
+		<p th:text="${mujeres}"    />
+	</div>
+	
+		<div class="col-md-3" >
+			<h4>Men :</h4>
+		</div>
+	<div class="col-md-3" >
+		<p th:text="${hombres}"  />
+	</div>
+	</div>
+     
+     <br>
+     <h4>Range of ages</h4>
+         	<div id="pageone">     			
+    			 <table id="custom" class="table table-striped" style="">
+				    <thead>
+				         <tr>
+				            <th>below of 20</th>
+				            <th>20 - 29</th>
+				            <th>30 - 39</th>
+				            <th>40 - 49</th>
+				            <th>50 - 59</th>
+				            <th>60 - 69</th>
+				            <th>70 - 79</th>
+				            <th>80 - 89</th>
+				         </tr>
+				    </thead>
+				    <tbody>
+				    	<tr th:each="currentAgerange: ${agerange}">
+				    		<td th:text="${currentAgerange.under20}" ></td>
+				    		<td th:text="${currentAgerange.b2029}" ></td>
+				    		<td th:text="${currentAgerange.b3039}" ></td>
+				    		<td th:text="${currentAgerange.b4049}" ></td>
+				    		<td th:text="${currentAgerange.b5059}" ></td>
+				    		<td th:text="${currentAgerange.b6069}" ></td>
+				    		<td th:text="${currentAgerange.b7079}" ></td>
+				    		<td th:text="${currentAgerange.b8089}" ></td>				   			
+				    	</tr>
+				    </tbody>
+			    </table>    			
+    		  </div> 
+     
+     
+     
+
+     <h4>Quantity by type of Insulin</h4>
+         	<div id="pagetwo">     			
+    			 <table id="diabetestype" class="table table-striped" style="">
+				    <thead>
+				         <tr>
+				            <th>Humalog_Novolog_Apidra</th>
+				            <th>Regular_R</th>
+				            <th>NPH_N</th>
+				            <th>Lantus_Levemir</th>
+				         </tr>
+				    </thead>
+				    <tbody>
+				    	<tr th:each="currentDiabetype: ${diabetype}">
+				    		<td th:text="${currentDiabetype.tipo1}" ></td>
+				    		<td th:text="${currentDiabetype.tipo2}" ></td>
+				    		<td th:text="${currentDiabetype.tipo3}" ></td>
+				    		<td th:text="${currentDiabetype.tipo4}" ></td>			   			
+				    	</tr>
+				    </tbody>
+			    </table>    			
+    		  </div> 
+     
+  
+     <h4>Quantity by type of  Diabetes</h4>
+         	<div id="pagetwo">     			
+    			 <table id="diabetesStat" class="table table-striped" style="">
+				    <thead>
+				         <tr>
+				            <th>Type 1 diabetes</th>
+				            <th>Type 2 diabete</th>
+				            <th>Prediabetes</th>
+				            <th>Gestational_diabetes</th>
+				         </tr>
+				    </thead>
+				    <tbody>
+				    	<tr th:each="currentDiabetypeStat: ${diabetesDes}">
+				    		<td th:text="${currentDiabetypeStat.tipo1}" ></td>
+				    		<td th:text="${currentDiabetypeStat.tipo2}" ></td>
+				    		<td th:text="${currentDiabetypeStat.tipo3}" ></td>
+				    		<td th:text="${currentDiabetypeStat.tipo4}" ></td>			   			
+				    	</tr>
+				    </tbody>
+			    </table>    			
+    		  </div> 
+    <p align="right" >
+		<a class="btn btn-primary" href="/menu">Back</a>
+	</p>
+					
+		
+		
+		</div>
+		
+		<div class="col-md-2" >
+		</div>
+		</div>
+     
+     
+     
+ </div>
+  <script src="/js/jQuery-3.3.1/jquery-3.3.1.min.js"></script> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>   
+</body>
+</html>
